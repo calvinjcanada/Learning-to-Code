@@ -1,0 +1,7 @@
+/* This is external CSS */
+/* This is the best way to do CSS */
+h3 {
+  color: aqua;
+}
+
+/* Have to add <link rel="stylesheet" href="FOLDER-NAME/FILENAME" */

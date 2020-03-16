@@ -1,0 +1,19 @@
+/* Media Query for Widescreen */
+/* Align icon to left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* Position icon */
+#what .items .item i {
+  margin-right: 1.3rem;
+  align-self: center;
+  /* Nice for Icons */
+  margin-bottom: 0;
+  /* Works well with aligh-self: because it has a default margin-bottom */
+}
+
+#contact .map {
+  flex: 2;
+}

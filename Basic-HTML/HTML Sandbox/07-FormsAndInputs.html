@@ -1,0 +1,120 @@
+<!-- HTML and CSS are used to display the form... -->
+<!-- But a backend programming language (Python, PHP, JavaScript) is used to process the form -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forms & Inputs</title>
+  </head>
+  <body>
+    <form action="process.php">
+      <!-- A form element is submitted to a file that processes it -->
+
+      <!-- Text Input -->
+      <div>
+        <label for="name">Name</label> <br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name!!"
+        />
+        <!-- Make the label name and the input id MATCH! -->
+        <!-- Input id attribute = name to match with the label element -->
+        <!-- Input name attribute = server-side variable name -->
+        <!-- Placeholder attribute = pre-enter a message that disappears when user types in the box -->
+      </div>
+
+      <!-- Email Input -->
+      <div>
+        <label for="email">Email</label><br />
+        <input type="email" name="email" id="email" />
+        <!-- By using input type, it adds client-side validation. -->
+        <!-- Still have to add server-side validation -->
+      </div>
+
+      <!-- Message Input -->
+      <div>
+        <label for="message">Message</label><br />
+        <!-- This is different than a text label -->
+        <!-- This is used for bigger content like a blog post or something -->
+        <textarea name="message" id="message" cols="30" rows="30"></textarea>
+      </div>
+
+      <!-- Select Input -->
+      <div>
+        <label for="sex">Sex</label>
+        <!-- The Select element = a dropdown selection menu -->
+        <select name="sex" id="sex">
+          <option value="male" selected>Male</option>
+          <!-- Selected attribute = pre-selected option -->
+          <option value="female">Female</option>
+          <option value="dog">Dog</option>
+        </select>
+      </div>
+
+      <!-- Number Input -->
+      <div>
+        <label for="age">Age</label><br />
+        <input type="number" name="age" id="age" />
+      </div>
+
+      <!-- Date Input -->
+      <div>
+        <label for="birthdate">Birth Date</label><br />
+        <input type="date" name="birthdate" id="birthdate" />
+      </div>
+
+      <!-- Radio Input -->
+      <div>
+        <label for="membership">Membership</label>
+        <!-- Radio buttons are for selections -->
+        <!-- The Checked attribute = pre-selected option -->
+        <input
+          type="radio"
+          name="membership"
+          id="membership"
+          checked
+          value="simple"
+        />
+        Simple
+        <input
+          type="radio"
+          name="membership"
+          id="membership"
+          value="standard"
+        />
+        Standard
+        <input
+          type="radio"
+          name="membership"
+          id="membership"
+          value="advanced"
+        />
+        Advanced
+      </div>
+
+      <!-- Checkbox Input -->
+      <div>
+        <label for="vehicles">Vehicles</label>
+        <!-- Checkboxes are for selections -->
+        <!-- The Checked attribute = pre-selected option -->
+        <input type="checkbox" name="likes" id="likes" checked value="bike" />
+        Bike <input type="checkbox" name="likes" id="likes" value="cars" /> Cars
+        <input type="checkbox" name="likes" id="likes" value="planes" /> Planes
+      </div>
+
+      <!-- Submitting the form. -->
+      <input type="submit" value="Submit" />
+
+      <!-- Button tag to submit the form -->
+      <button type="submit">Submit</button>
+
+      <!-- Reset button -->
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

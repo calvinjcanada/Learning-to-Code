@@ -1,0 +1,238 @@
+<!-- People don't want a lot of content to read. -->
+<!-- They want everything easy and simple to read -->
+<!-- Single-page websites are big -->
+<!-- Design websites top > bottom -->
+<!-- Style as you go -->
+
+<!-- How to get Google Maps on page! -->
+<!-- 1. Login to Google account -->
+<!-- 2. Search Google Console(Google Cloud Console)  -->
+<!-- 3. Create a Project -->
+<!-- 4. Side menu: Click APIs & Services -->
+<!-- 5. Click Enable APIs & Services -->
+<!-- 6. Search Maps Javascript API -->
+<!-- 7. Click Enable -->
+<!-- 8. Generate credentials (Credentials in API Manager) -->
+<!-- 9. Click Create credentials -->
+<!-- 10. Copy and store it -->
+<!-- 11. Google "Google Maps Doc" -->
+<!-- 12. Will tell you how to embed the map (script tag) -->
+<!-- Requires a height attribute in its CSS styling -->
+
+<!-- COMMON ISSUES & FIXES
+Here are a couple things to mention and/or people have had issues with along with some fixes to try. 
+They will be added to the videos in the next update.
+
+1. OVERLAY NOT GOING ALL THE WAY DOWN
+Make the #showcase
+
+position: relative;
+
+
+Make #showcase .showcase-content
+
+position:absolute;
+top:0;
+
+Make sure in your mobile media query, you remove the following or it will go outside the image
+  #showcase .showcase-content {
+    top: 110px;
+  }
+
+2. FLEX ITEMS NOT EVEN WHEN USING FLEX:1
+This is happening in the what and contact section
+"flex-basis" is used to set the initial size of a flex item. Try adding the following...
+#who div {
+  flex: 1;
+  flex-basis: 50%;
+}
+#contact .map, #contact .contact-form {
+  flex: 1;
+  flex-basis: 50%;
+}
+Helpful Link: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
+
+3. GOOGLE MAP NOT DISPLAYING
+Unfortunately, the Google map API is not completely free anymore.  
+You do get a $200 credit, so you do not have to actually spend any money to use it in this course. 
+I use maps all the time in tutorials and have still never been charged.
+
+More Info Here
+https://cloud.google.com/maps-platform/pricing/
+
+If you want to completely disregard the map, just fill that area with whatever you want such as an image, placeholder map, location info, etc..
+Sorry for not mentioning it in the video, I completely forgot they started charging For the Google APIs. 
+I have had my credit card linked for a long time so I was not prompted and I have never been charged by Google for maps.
+It really sucks when free services decide to start charging people. I have run into this about 3 times in my courses. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Icons -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Main CSS Stylesheet - Should have before Media Queries -->
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+  <!-- Media Query -->
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/widescreen.css">
+  <!-- Media Query -->
+  <title>EdgeLedger Financial | Accounting & Investment</title>
+</head>
+<!-- HTML Body -->
+<body id="home">
+  <!-- Navbar -->
+  <nav id="navbar">
+    <h1 class="logo">
+      <span class="text-primary">
+        <i class="fas fa-book-open"></i> Edge</span>Ledger
+        <!-- Icon for Navbar -->
+    </h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#what">What</a></li>
+      <li><a href="#who">Who</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Header: Showcase -->
+  <header id="showcase">
+    <div class="showcase-content">
+      <h1 class="l-heading">
+        The Sky Is The Limit
+      </h1>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatibus debitis praesentium inventore, eum deserunt.
+      </p>
+      <a href="#what" class="btn">Read More</a>
+    </div>
+  </header>
+
+  <!-- Section: What We Do -->
+  <section id="what" class="bg-light py-1">
+    <div class="container">
+      <!-- Content Wrapper -->
+      <h2 class="m-heading text-center"><span class="text-primary">What</span> We Do</h2>
+      <div class="items">
+        <div class="item">
+          <i class="fas fa-university fa-2x"></i>
+          <!-- Icon -->
+          <div>
+            <h3>Investment Banking</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+          </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-book-reader fa-2x"></i>
+            <!-- Icon -->
+            <div>
+              <h3>Portfolio Management</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-pencil-alt fa-2x"></i>
+            <!-- Icon -->
+            <div>
+              <h3>Tax & Custodial</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Who We Are -->
+  <section id="who">
+    <!-- No Content Container: Allows content to reach horizontal edges of screen -->
+    <div class="who-img"></div>
+    <div class="who-text bg-dark p-2">
+      <h2 class="m-heading"><span class="text-primary">Who</span> We Are</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora culpa harum voluptas ratione enim consequuntur illo, atque, aut doloribus unde repellendus sit delectus beatae aspernatur placeat corrupti. Ipsa, itaque quas.</p>
+      <h3>Our Team</h3>
+      <ul class="list">
+        <li>Mark Smith: CEO</li>
+        <li>Shannon Johnson: CFO</li>
+        <li>John Corbit: Lead Accountant</li>
+        <li>Janet Williams: Investment Manager</li>
+        <li>Kara Jackson: Senior Accountant</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Clients -->
+  <section id="clients" class="py-1">
+    <div class="container">
+      <!-- Content Wrapper -->
+      <h2 class="m-heading text-center">
+        <span class="text-primary">Our</span> Clients
+      </h2>
+      <div class="items py-1">
+        <div><img src="./img/logos/logo1.png" alt="Client"></div>
+        <div><img src="./img/logos/logo2.png" alt="Client"></div>
+        <div><img src="./img/logos/logo3.png" alt="Client"></div>
+        <div><img src="./img/logos/logo4.png" alt="Client"></div>
+        <div><img src="./img/logos/logo5.png" alt="Client"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  <section id="contact">
+    <div class="contact-form bg-primary p-2">
+      <h2 class="m-heading">Contact Us</h2>
+      <p>Please use the form below to contact us</p>
+      <form action="process.php" method="POST">
+        <!-- Action is the processing PHP file -->
+        <!-- Method = the API method...POST = submitting data -->
+        <!-- Form -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+        </div>
+        <input type="submit" value="Send" class="btn btn-dark">
+      </form>
+    </div>
+    <div class="map"></div>
+    <!-- This "map" class is targeted by the JS script -->
+    
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+    <div class="container">
+      <p>Copyright &copy; 2019, EdgeLedger, All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- JQuery CDN -->
+  <!-- Needs to be before JS file -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Local JS File -->
+  <script src="js/main.js"></script>
+  <!-- Used to invoke your JS script -->
+
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII&callback=initMap"
+  async defer></script>
+</body>
+</html>

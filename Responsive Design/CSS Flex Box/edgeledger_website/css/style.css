@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* Import font  from fonts.google.com*/
+
+* {
+  /* Reset */
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+body {
+  /* HTML Body */
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  /* Links */
+  text-decoration: none;
+}
+
+p {
+  /* Paragraphs */
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.container {
+  /* Content Wrapper Class */
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.text-primary {
+  color: #93cb52;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-primary {
+  background: #93cb52;
+  color: #fff;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Padding Y-Axis */
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+/* All-around Padding */
+/* Spacing inside of the element */
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.btn {
+  /* Button */
+  display: inline-block;
+  color: #fff;
+  background: #93cb52;
+  padding: 0.5rem 2rem;
+  /* Spaces out the contents of the button */
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #7ab436;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  /* Always stays in same position as you scroll */
+  top:0;
+  /* top: 0 = stick to the top of the page */
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  /* Aligns flex items horizontally */
+  z-index: 1;
+  /* brings an element closer to the screen */
+  padding: 1rem;
+  /* 1rem = 16px default (because default root HTML = 16px */
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  /* aligns the list horizontally on the center */
+  list-style: none;
+  /* Remove bullets */
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  /* padding = outside spacing between items */
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  /* Stretch all the way down */
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  /* Showcase content */
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* requires height attribute */
+  height: 100%;
+  /* 100% of parent element */
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 65px;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  /* Red-Green-Blue-Alpha(Transparency) */
+}
+
+/* Section: What We Do */
+#what .items {
+  display: flex;
+  padding: 1rem;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Section: Who We Are */
+#who {
+  display: flex;
+}
+
+#who div {
+  flex: 1;
+  /* All divs will have equal spacing */
+}
+
+#who .who-img {
+  background: url('../img/people.jpg') no-repeat center center/cover;
+}
+
+/* Section: Clients */
+#clients .items {
+  display: flex;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
+  /* Re-size images to 60% of its parent container */
+}
+
+/* Section: Contact */
+#contact {
+  display: flex;
+}
+
+#contact .map, #contact .contact-form {
+  flex: 1;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}

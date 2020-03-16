@@ -1,0 +1,73 @@
+<!-- JPEG files cannot be transparent -->
+<!-- PNG files can have a transparent background -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backgrounds and Borders</title>
+<style>
+  #box-1 {
+    background-color: goldenrod;
+    border: 3px solid red;
+    /* Border requires all 3 properties */
+    border-radius: 10px;
+    /* Border-radius = curve the edges of the border */
+  }
+
+  #box-2 {
+    background-color: rosybrown;
+    color: seagreen;
+    border: 4px solid blueviolet;
+  }
+
+  #box-3 {
+    background-image: url('https://source.unsplash.com/random?fire');
+    color: chartreuse;
+    height: 300px;
+    width: 600px;
+    background-repeat: no-repeat;
+    /* Usually, don't want your background image to repeat */
+    /* background-position: 50px 50px; */
+    /* Used to position the background image in the elements */
+    background-size: cover;
+    /* This makes the background image cover the entire element */
+
+    /* Can also do all of in one line */
+    /* background-image: url('https://source.unsplash.com/random?fire') no-repeat center center/cover; */
+  }
+
+  #box-4 {
+    background: url('https://source.unsplash.com/random') no-repeat center center/cover;
+    background-attachment: fixed;
+    /* This fixes the image to the background of the site while you scroll */
+  }
+</style>
+
+</head>
+<body>
+  <div id="box-1">
+    <h3>Box One</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+  </div> <br>
+  <div id="box-2">
+    <h3>Box Two</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+  </div>
+  <div id="box-3">
+    <h3>Box Three</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+  </div>
+  <div id="box-4">
+    <h3>Box Four</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum provident temporibus sapiente distinctio quas. Officia voluptatibus voluptatum quisquam est.</p>
+  </div>
+  
+</body>
+</html>

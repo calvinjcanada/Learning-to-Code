@@ -1,0 +1,98 @@
+<!-- Used to apply different CSS based on device type -->
+<!-- Always test with Google Chrome Developer Tools -->
+<!-- Device Toolbar lets you test your webpage on different devices: Mobile, PC, Tablet -->
+<!-- Most common: Iphone 6/7/X -->
+<!-- Shows you the width and the height of the device -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Media Queries</title>
+  <!-- You will normally do these styles in a style.css file and not in the html -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: gray;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      display: none;
+    }
+
+    /* Smartphones */
+    @media only screen and (max-width: 500px) {
+      /* Usually a width of 500px is good for smartphones */
+      /* The "only screen" setting is optional: No point in using it.  */
+      body {
+        background: red;
+      }
+
+      #smartphone h1 {
+        display: block;
+      }
+    }
+
+    /* Tablet */
+    @media(min-width: 501px) and (max-width: 768px) {
+      /* 768 width usually is good for tablets */
+      /* Use mid-width instead so that you can have different styles for smartphones and tablets */
+      body {
+        background: blue;
+      }
+
+      #tablet h1 {
+        display: block;
+      }
+    }
+
+    /* Normal */
+    @media(min-width: 769px) and (max-width: 1200px) {
+      body {
+        background: green;
+      }
+
+      #normal h1 {
+        display: block;
+      }
+    }
+
+    /* Widescreen */
+    @media(min-width: 1201px) {
+      body {
+        background: black;
+      }
+
+      #widescreen h1 {
+        display: block;
+      }
+    }
+
+    /* Landscape */
+    /* This is for landscape mode modbile */
+    @media(max-height: 500px) {
+      body {
+        background: orange;
+      }
+
+      #landscape h1 {
+        display: block;
+      }
+      
+    }
+  </style>
+  <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css"> -->
+</head>
+<body>
+  <div id="widescreen"><h1>Widescreen</h1></div>
+  <div id="normal"><h1>Normal</h1></div>
+  <div id="tablet"><h1>Tablet</h1></div>
+  <div id="smartphone"><h1>Smartphone</h1></div>
+  <div id="landscape"><h1>Landscape</h1></div>
+</body>
+</html>

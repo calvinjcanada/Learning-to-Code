@@ -1,0 +1,321 @@
+/* Build Process */
+/* 1. Header */
+/* 2. Navbar */
+/* 3. Section (place background img here) */
+/* 4. Container div (to center content) */
+/* 5. Footer */
+
+/* Reset */
+/* Always do this! */
+/* You now have to add your own padding and margins */
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+/* Main Styling */
+html,body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  /* Adds spacing between the lines. */
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+  /* Adds spacing at the bottom */
+}
+
+p {
+  margin: 10px 0;
+  /* margin: Top-Bottom Left-Right */
+}
+
+/* Utility Classes */
+/* These are basically used as your page theme */
+.container {
+  /* You want to put your content inside of containers. NOT the background of the content */
+  margin: auto;
+  /* Pushes everything to the center */
+  max-width: 1100px;
+  /* Max-width = responsive */
+  overflow: auto;
+  /* Always shows background */
+  padding: 0px 20px;
+}
+
+.text-primary {
+  color: #f7c08a;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.btn {
+  /* Makes links into buttons */
+  display: inline-block;
+  /* Gives element own line but does not make it stretch all the way across */
+  /* display: inline; */
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 13px 20px;
+  border: none;
+  /* border: #f7c08a 1px solid; */
+  /* Better to have no borders */
+  cursor: pointer;
+  border-radius: 150px;
+}
+
+.btn:hover {
+  background: #f7c08a;
+  color: #333;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-primary {
+  background: #f7c08a;
+  color: #333;
+}
+
+.clr {
+  clear: both;
+}
+
+.l-heading {
+  font-size: 40px;
+}
+
+/* Padding */
+/* Do this to have a templated padding scheme */
+.py-1 { padding: 10px 0; }
+/* padding y-axis */
+.py-2 { padding: 20px 0; }
+/* padding y-axis */
+.py-3 { padding: 30px 0; }
+/* padding y-axis */
+
+/* Navbar */
+#navbar {
+  /* Navbar background */
+  background: #333;
+  color: #fff;
+  overflow: auto;
+  /* Shows background no matter what */
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  /* This is the logo */
+  float: left;
+  /* Places element on the left side of the page */
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  /* Remove list bullets */
+  float: right;
+  /* Places element on the right side of the page */
+}
+
+#navbar ul li {
+  float: left;
+  /* Places element on the left side of page */
+}
+
+#navbar ul li a {
+  display: block;
+  /* Gives each element its own line */
+  padding: 20px;
+  /* Pushes element 20 pixels on all sides */
+  text-align: center;
+  /* Aligns text to the center */
+}
+
+#navbar ul li a:hover, 
+#navbar ul li a.current {
+  /* Applies these settings to both classes */
+  background: #444;
+  color: #f7c08a;
+}
+
+/* Showcase */
+#showcase {
+  /* The big image on the page */
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
+  /* .. means go outside of the current file */
+  /* center/cover makes the image cover the entire section */
+  height: 600px;
+}
+
+#showcase .showcase-content {
+  /* Showcase content */
+  color: #fff;
+  text-align: center;
+  padding-top: 170px;
+}
+
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+/* Home Info */
+#home-info {
+  height: 400px;
+}
+
+#home-info .info-img {
+  float: left;
+  width: 50%;
+  background: url('../img/photo-1.jpg') no-repeat;
+  min-height: 100%;
+}
+
+#home-info .info-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 0px;
+  overflow: hidden;
+  /* Disables scrollbar */
+}
+
+#home-info .info-content p {
+  padding-bottom: 10px;
+}
+
+/* Features */
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align:center;
+}
+
+.box i {
+  /* Margin for the icons on the page */
+  margin-bottom: 10px;
+}
+
+/* About Info */
+#about-info .info-right {
+  float: right;
+  width: 50%;
+  min-height: 100%;
+}
+
+#about-info .info-right img {
+  display: block;
+  /* Images are displayed inline by default. */
+  /* Display: block is required to use Margin: auto; */
+  margin: auto;
+  width: 70%;
+  border-radius: 50%;
+}
+
+#about-info .info-left {
+  float: left;
+  width: 50%;
+  min-height: 100%;
+}
+
+/* Testimonials */
+#testimonials {
+  height: 600px;
+  background: url('../img/test-bg.jpg') no-repeat center center/cover;
+  padding-top: 50px;
+}
+
+#testimonials h2 {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#testimonials .testimonial {
+  /* The class that houses the testimonial content */
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  opacity: 0.9;
+  /* 0 = clear, 1 = not clear */
+}
+
+#testimonials .testimonial img {
+  /* For the images in the testimonal section with the testimonial class */
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Contact Form */
+#contact-form .form-group {
+  margin-bottom: 20px;
+  /* Spacing for each input field */
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  /* Space in the input field */
+  border: 1px #ddd solid;
+}
+
+#contact-form textarea {
+  height: 200px;
+}
+
+#contact-form input:focus, 
+#contact-form textarea:focus {
+  /* This changes the blue line that appears around an input box when you hover over it */
+  outline: none;
+  border-color: #f7c08a;
+}
+
+/* Footer */
+#main-footer {
+  text-align: center;
+  background: #444;
+  color: #fff;
+  padding: 20px;
+}
