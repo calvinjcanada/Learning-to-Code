@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Main CSS -->
+    <title>Ninja Chat</title>
+  </head>
+  <body>
+    <!-- container & title -->
+    <div class="container my-4">
+      <!-- Center Content (contains everything) -->
+      <h1 class="my-4 text-center">Ninja Chat</h1>
+      <!-- buttons for chatrooms -->
+      <div class="chat-rooms mb-3 text-center">
+        <div class="my-2">Choose a chatroom:</div>
+        <!-- Choose a Chatroom buttons -->
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="gaming">#gaming</button>
+        <button class="btn" id="music">#music</button>
+        <button class="btn" id="ninjas">#ninjas</button>
+      </div>
+      <!-- chat list / window -->
+      <!-- Where messages will be viewed -->
+      <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+        <!-- All messages will be here -->
+      </div>
+      <!-- new chat form -->
+      <form class="new-chat my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Your message:</div>
+          </div>
+          <input type="text" id="message" class="form-control" required />
+          <!-- This is where you type your message -->
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="send" />
+            <!-- Send button -->
+          </div>
+        </div>
+      </form>
+      <!-- update name form -->
+      <form class="new-name my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Update name:</div>
+            <!-- Update name -->
+          </div>
+          <input type="text" id="name" class="form-control" required />
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="update" />
+          </div>
+        </div>
+        <div class="update-mssg"></div>
+        <!-- Gives feedback to the user -->
+      </form>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDhe9xWw6K81IEXz53Fn5QTPtoe6eC2TRs",
+        authDomain: "udemy-modern-javascript-8952a.firebaseapp.com",
+        databaseURL: "https://udemy-modern-javascript-8952a.firebaseio.com",
+        projectId: "udemy-modern-javascript-8952a",
+        storageBucket: "udemy-modern-javascript-8952a.appspot.com",
+        messagingSenderId: "704317791179",
+        appId: "1:704317791179:web:3ebda930a8778d2a3d344e",
+        measurementId: "G-8MRM7YZPGN"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      firebase.analytics();
+    </script>
+
+    <!-- Javascript Scripts -->
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
