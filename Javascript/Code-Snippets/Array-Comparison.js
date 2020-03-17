@@ -14,4 +14,7 @@ function arrayDiff(a, b) {
   }
   return a;
   
+  //Best solution below
+  //  return a.filter(function(x) { return b.indexOf(x) == -1; });
+  
 }
