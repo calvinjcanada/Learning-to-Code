@@ -62,5 +62,18 @@ function anagrams(word, words) {
 
   
   return words;
+  
+  //Best Solution
+  //1. Create function to sort the letters in the word in order
+  //2. Compare the resulting strings of the 2 words
+  
+  //String.prototype.sort = function() {
+  //return this.split("").sort().join("");
+  //};
+
+  //function anagrams(word, words) {
+  //return words.filter(function(x) {
+  //    return x.sort() === word.sort();
+  //});
 
 }
