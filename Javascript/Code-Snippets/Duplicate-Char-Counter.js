@@ -27,4 +27,7 @@ function duplicateCount(text){
   //console.log(repeat);
   return repeat.length || 0;
   
+  //Best Solution
+  //return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+  
 }
