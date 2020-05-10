@@ -1,0 +1,38 @@
+/* img: responsively re-size, position: absolute > center */
+/* img parent: position: relative */
+/* ids: img-div, img-caption, image, main, title, tribute-info, tribute-link */
+
+#img-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-caption {
+  background-color: rebeccapurple;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  background-color: red;
+}
+
+#main {
+  background-color: royalblue;
+}
+
+#title {
+  background-color: tan;
+}
+
+#tribute-info {
+  background-color: forestgreen;
+}
+
+#tribute-link {
+  background-color: fuchsia;
+}
